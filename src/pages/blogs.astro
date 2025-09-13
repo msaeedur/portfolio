@@ -1,0 +1,124 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { siteConfig } from "../config";
+import "../styles/global.css";
+
+// Sample blog posts - you can replace this with your actual blog data
+const blogPosts = [
+  {
+    title: "Getting Started with Arabic Speech Recognition",
+    excerpt: "Building lightweight speech recognition systems for Arabic language with minimal resources and maximum efficiency.",
+    date: "2024-12-15",
+    readTime: "5 min read",
+    slug: "arabic-speech-recognition",
+    tags: ["AI", "Speech Recognition", "Arabic", "Machine Learning"]
+  },
+  {
+    title: "Explainable AI in Computer Vision",
+    excerpt: "How we implemented explainable AI methods like GradCAM and SHAP for rail track semantic segmentation at Siemens.",
+    date: "2024-11-20",
+    readTime: "8 min read",
+    slug: "explainable-ai-computer-vision",
+    tags: ["Computer Vision", "Explainable AI", "Deep Learning", "Safety"]
+  },
+  {
+    title: "MLOps Best Practices for Production",
+    excerpt: "Lessons learned from deploying machine learning models in production environments with AWS and Docker.",
+    date: "2024-10-10",
+    readTime: "6 min read",
+    slug: "mlops-best-practices",
+    tags: ["MLOps", "AWS", "Docker", "Production"]
+  }
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Blog posts by Muhammad Saeed Ur Rehman on AI, Machine Learning, and Software Engineering" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Blogs - {siteConfig.name}</title>
+  </head>
+  <body>
+    <Header />
+    <main class="min-h-screen bg-white pt-20">
+      <div class="mx-auto max-w-6xl px-6 py-16 lg:px-8">
+        <!-- Header Section -->
+        <div class="text-center mb-16">
+          <h1 class="text-4xl font-bold text-gray-900 mb-4">Blog</h1>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Thoughts and insights on AI, Machine Learning, and Software Engineering
+          </p>
+        </div>
+
+        <!-- Blog Posts Grid -->
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {blogPosts.map((post) => (
+            <article class="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div class="p-6">
+                <div class="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                  <time datetime={post.date}>
+                    {new Date(post.date).toLocaleDateString('en-US', { 
+                      year: 'numeric', 
+                      month: 'long', 
+                      day: 'numeric' 
+                    })}
+                  </time>
+                  <span>•</span>
+                  <span>{post.readTime}</span>
+                </div>
+                
+                <h2 class="text-xl font-semibold text-gray-900 mb-3 hover:text-blue-600 transition-colors">
+                  <a href={`/blog/${post.slug}`} class="block">
+                    {post.title}
+                  </a>
+                </h2>
+                
+                <p class="text-gray-600 mb-4 line-clamp-3">
+                  {post.excerpt}
+                </p>
+                
+                <div class="flex flex-wrap gap-2 mb-4">
+                  {post.tags.map((tag) => (
+                    <span class="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                
+                <a 
+                  href={`/blog/${post.slug}`}
+                  class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors"
+                >
+                  Read more
+                  <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <!-- Coming Soon Message -->
+        <div class="text-center mt-16 p-8 bg-gray-50 rounded-lg">
+          <h3 class="text-2xl font-semibold text-gray-900 mb-4">More Posts Coming Soon</h3>
+          <p class="text-gray-600 max-w-md mx-auto">
+            I'm working on more in-depth articles about AI, machine learning, and software engineering. 
+            Stay tuned for updates!
+          </p>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

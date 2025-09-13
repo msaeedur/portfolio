@@ -1,13 +1,13 @@
 export const siteConfig = {
-  name: "Muhammad Saeed Ur-Rehman",
+  name: "Muhammad Saeed Ur Rehman",
   title: "AI Engineer & Data Scientist",
   description: "Portfolio website of Muhammad Saeed Ur-Rehman - AI Engineer specializing in Computer Vision, Speech Recognition, and Machine Learning Operations",
   accentColor: "#1d4ed8",
   social: {
-    email: "your-email@example.com",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    twitter: "",
-    github: "https://github.com/yourprofile",
+    email: "muhammad.saeedur@gmail.com",
+    linkedin: "https://www.linkedin.com/in/msaeedur/",
+    // twitter: "",
+    github: "https://github.com/msaeedur",
   },
   aboutMe:
     "AI Engineer and Data Scientist with expertise in computer vision, speech recognition, and machine learning operations. Currently working on cutting-edge Arabic speech recognition systems at Quranlinqo, with previous experience at Siemens Mobility developing explainable AI solutions for rail safety. Passionate about building accessible AI solutions that work on resource-constrained devices and making technology more inclusive.",
