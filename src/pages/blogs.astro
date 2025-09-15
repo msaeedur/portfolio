@@ -3,6 +3,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { siteConfig } from "../config";
 import "../styles/global.css";
+const base = import.meta.env.BASE_URL;
 
 // Sample blog posts - you can replace this with your actual blog data
 const blogPosts = [
@@ -58,55 +59,6 @@ const blogPosts = [
           <p class="text-xl text-gray-600 max-w-2xl mx-auto">
             Thoughts and insights on AI, Machine Learning, and Software Engineering
           </p>
-        </div>
-
-        <!-- Blog Posts Grid -->
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {blogPosts.map((post) => (
-            <article class="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div class="p-6">
-                <div class="flex items-center gap-2 text-sm text-gray-500 mb-3">
-                  <time datetime={post.date}>
-                    {new Date(post.date).toLocaleDateString('en-US', { 
-                      year: 'numeric', 
-                      month: 'long', 
-                      day: 'numeric' 
-                    })}
-                  </time>
-                  <span>•</span>
-                  <span>{post.readTime}</span>
-                </div>
-                
-                <h2 class="text-xl font-semibold text-gray-900 mb-3 hover:text-blue-600 transition-colors">
-                  <a href={`/blog/${post.slug}`} class="block">
-                    {post.title}
-                  </a>
-                </h2>
-                
-                <p class="text-gray-600 mb-4 line-clamp-3">
-                  {post.excerpt}
-                </p>
-                
-                <div class="flex flex-wrap gap-2 mb-4">
-                  {post.tags.map((tag) => (
-                    <span class="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                
-                <a 
-                  href={`/blog/${post.slug}`}
-                  class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors"
-                >
-                  Read more
-                  <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-            </article>
-          ))}
         </div>
 
         <!-- Coming Soon Message -->
