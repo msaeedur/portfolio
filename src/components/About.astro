@@ -19,11 +19,16 @@ import { siteConfig } from "../config";
       </div>
 
       <div class="lg:col-span-8 space-y-8">
-        <p class="text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-600">
-          {siteConfig.aboutMe}
-        </p>
+        <div class="space-y-6">
+          <p class="text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-600">
+            I specialize in building <strong>production-ready AI solutions</strong> that are accurate, scalable, and optimized for real-world constraints. With expertise in computer vision, NLP, speech recognition, and MLOps, I help transform complex AI challenges into practical, high-impact applications.
+          </p>
+          
+        </div>
 
+        <!-- Skills Section -->
         <div class="pt-4">
+          <h3 class="text-lg font-semibold text-gray-900 mb-4">Technical Skills</h3>
           <div class="flex flex-wrap gap-3">
             {
               siteConfig.skills.map((skill) => (
