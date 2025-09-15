@@ -43,7 +43,7 @@ export const siteConfig = {
       name: "Rail Track Semantic Segmentation with Explainable AI",
       description:
         "Computer vision system for rail safety using explainable AI methods including Saliency Maps, GradCAM, SHAP, and LIME to improve transparency of semantic segmentation models",
-      link: "",
+      link: "https://safetrain-projekt.de/en/",
       skills: ["Computer Vision", "Python", "TensorFlow", "ROS2","Uncertainty Estimation","Explainable AI", "Out-of-Distribution", "UNet", "CI/CD", "MLOps","CARLA"],
     },
     {
