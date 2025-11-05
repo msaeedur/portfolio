@@ -57,7 +57,7 @@ export const siteConfig = {
   experience: [
     {
       company: "Quranlingo",
-      title: "AI Engineer Speech Recognition",
+      title: "AI Engineer Speech Recognition (pro bono)",
       dateRange: "Jul 2025 - Present",
       bullets: [
         "Designed and deployed a lightweight Arabic speech recognition system (1MB vs 200+ MB competitors) on AWS cloud",
