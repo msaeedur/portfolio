@@ -35,9 +35,9 @@ export const siteConfig = {
     {
       name: "Arabic Speech Recognition System",
       description:
-        "Lightweight Arabic speech recognition system (1MB vs 200+ MB competitors) deployed on AWS cloud, enabling real-time pronunciation feedback for Quran learning applications",
+        "Low-latency Arabic speech recognition system deployed on AWS with personalized pronunciation feedback and mobile integration. Features fine-tuned generative AI image models using diffusion and flow-matching techniques for educational content, built with scalable microservice architecture using Docker and FastAPI",
       link: "https://www.linkedin.com/posts/quranlingo_quranlingo-ai-speechrecognition-activity-7367956380923633664-K5Ue?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA9ZY0oBSbxJoqksgPNWhmyCMr4pHVcg58c",
-      skills: ["Python", "Speech Recognition", "AWS", "Machine Learning", "Generative AI (Text-to-Image)","Mobile Development", "FastAPI", "Whisper (OpenAI)","AI Model Fine-Tuning"],
+      skills: ["Python", "Speech Recognition", "AWS", "Machine Learning", "Generative AI (Text-to-Image)", "Mobile Development", "FastAPI", "Docker", "Microservices", "Whisper (OpenAI)", "AI Model Fine-Tuning", "Diffusion Models"],
     },
     {
       name: "Rail Track Semantic Segmentation with Explainable AI",
@@ -57,12 +57,23 @@ export const siteConfig = {
   experience: [
     {
       company: "Quranlingo",
-      title: "AI Engineer Speech Recognition (pro bono)",
-      dateRange: "Jul 2025 - Present",
+      title: "Senior Machine Learning Engineer",
+      dateRange: "Jul 2025 - Jan 2026",
       bullets: [
-        "Designed and deployed a lightweight Arabic speech recognition system (1MB vs 200+ MB competitors) on AWS cloud",
-        "Engineered AI-powered solution optimized for low-spec devices with minimal storage and weak GPUs",
-        "Built custom speech recognition engine achieving low-latency performance with limited training data",
+        "Developed and deployed a low-latency Arabic speech recognition system on AWS with personalized pronunciation feedback and mobile integration",
+        "Fine-tuned generative AI image models using diffusion and flow-matching techniques to create educational images for children",
+        "Designed a scalable microservice-based setup using Docker and FastAPI to support real-time speech recognition",
+      ],
+    },
+    {
+      company: "Binary Soft Solutions",
+      title: "Lead AI Engineer (Freelance)",
+      dateRange: "Oct 2024 - Jun 2025",
+      bullets: [
+        "Developed a recursive RAG Chrome extension using Python, DSPy, and JavaScript to traverse citation trees, simplifying complex research concept explanations for users",
+        "Led a team of three AI engineers using Scrum methodologies, resulting in streamlined code reviews and accelerated project delivery cycles",
+        "Architected a scalable serverless backend using AWS Lambda, S3, and DynamoDB via Infrastructure as Code for a high-availability career assistant platform",
+        "Deployed YOLOv8 and YOLOv10 models for real-time activity recognition on home security feeds, facilitating automated detection of critical behavioral anomalies",
       ],
     },
     {
